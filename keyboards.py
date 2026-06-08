@@ -18,6 +18,9 @@ CB_MENU_INSTRUCTIONS = "menu:instructions"
 CB_MENU_PROFILE = "menu:profile"
 CB_MENU_SUPPORT = "menu:support"
 CB_MENU_ADMIN = "menu:admin"
+CB_MENU_WRITE_ME = "menu:write_me"
+
+WRITE_ME_USER_ID = 562179
 
 CB_INST_ADD_CHANNEL = "inst:add_channel"
 CB_INST_CREATE_POLL = "inst:create_poll"
@@ -86,7 +89,7 @@ def main_menu(is_admin: bool = False) -> list[dict]:
         [_btn("📖 Инструкции по боту", CB_MENU_INSTRUCTIONS)],
         [_btn("👤 Профиль и каналы", CB_MENU_PROFILE)],
         [_btn("🆘 Связаться с нами", CB_MENU_SUPPORT)],
-        [{"type": "link", "text": "🫡 Написать мне", "url": "https://max.ru/id562179"}],
+        [_btn("🫡 Написать мне", CB_MENU_WRITE_ME)],
     ]
     if is_admin:
         rows.append([_btn("🛠 Админ-панель", CB_MENU_ADMIN)])
