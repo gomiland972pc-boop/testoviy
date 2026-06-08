@@ -86,6 +86,7 @@ def main_menu(is_admin: bool = False) -> list[dict]:
         [_btn("📖 Инструкции по боту", CB_MENU_INSTRUCTIONS)],
         [_btn("👤 Профиль и каналы", CB_MENU_PROFILE)],
         [_btn("🆘 Связаться с нами", CB_MENU_SUPPORT)],
+        [{"type": "link", "text": "🫡 Написать мне", "url": "https://max.ru/id5741771"}],
     ]
     if is_admin:
         rows.append([_btn("🛠 Админ-панель", CB_MENU_ADMIN)])
